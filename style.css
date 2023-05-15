@@ -1,41 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: stretch;
     min-height: 100vh;
+    grid-template-columns: repeat(auto-fill);
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
-    background: yellow;
+    padding: 5px 2%;
+    background: linear-gradient(blue, skyblue);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 100;
     border-bottom: solid;
     border-spacing: 5px;
 }
-.logo{
-    font-size: 40px;
-    user-select: none;
+
+.logopic {
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
 }
-.logopic{
-    width: 35px;
-    height: 35px;
-}
-.navegador a{
+
+.navegador a {
     color: black;
     position: relative;
     font-size: 1.1em;
@@ -43,7 +44,8 @@ header{
     font-weight: 500;
     margin-left: 40px;
 }
-.navegador a::after{
+
+.navegador a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -56,14 +58,21 @@ header{
     transform: scaleX(0);
     transition: transform .3s;
 }
-.navegador a:hover::after{
+
+.navegador a:hover::after {
     transform: scaleX(1)
 }
-.navegador .home{
-    width: 20px;
-    height: 15px;
+
+.Home {
+    color: black;
+    text-decoration: none;
 }
-.navegador .btnlogin-popup{
+
+.Home::after {
+    color: black;
+}
+
+.navegador .btnlogin-popup {
     height: 50px;
     width: 130px;
     background: transparent;
@@ -76,17 +85,82 @@ header{
     margin-left: 40px;
     transition: .5s;
 }
-.navegador .btnlogin-popup:hover{
+
+.navegador .btnlogin-popup:hover {
     background: white;
     color: black;
 }
-.text{
-    margin-top: 10%;
+
+.navegador .btn-carrinho {
+    height: 50px;
+    width: 130px;
+    background: transparent;
+    border: 2px solid;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navegador .btn-carrinho:hover {
+    background: white;
+    color: black;
+}
+
+.text {
+    margin-top: 8%;
     max-width: 75%;
     text-align: justify;
+    background: white;
 }
-.text .tittletext{
+
+.text .tittletext {
     color: blue;
     font-weight: 500;
     font-size: 24px;
+}
+
+.Search-bar {
+    width: 400px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.Search-bar input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    padding-left: 10px;
+}
+
+.Search-bar input::placeholder {
+    color: black;
+}
+
+.Search-bar button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Search-bar button i {
+    font-size: 22px;
+    color: black;
 }
